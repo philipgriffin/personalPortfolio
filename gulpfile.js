@@ -36,12 +36,13 @@ var vendorJs = [
 
 // TODO: Update the CDN's
 var vendorCSS = [
-
+    'extCSS/animate.css',
+    'node_modules/bootstrap/dist/css/bootstrap.min.css'
 ];
 
 // MAIN TASKS
 
-gulp.task('build', ['clear', 'vendor', 'scripts', 'html', 'css', 'images', 'clean'], function(){
+gulp.task('build', ['clear', 'vendorJS', 'vendorCSS', 'scripts', 'html', 'css', 'images', 'clean'], function(){
     gutil.log(gutil.colors.green('Build - Finished!\n'+ ((reloadCount >= 1) ? 'Reload Count: ' + reloadCount : '')));
     reloadCount++;
 });
@@ -73,12 +74,12 @@ gulp.task('scripts', ['templatecache'], function () {
         });
 });
 
-gulp.task('vendor', function () {
+gulp.task('vendorJS', function () {
     return gulp.src(vendorJs)
         .pipe(concat('vendor.min.js'))
         .pipe(gulp.dest(paths.distJs))
         .on('end', function() {
-            gutil.log(gutil.colors.blue('Vendor: Concat | >'), gutil.colors.green(paths.dist));
+            gutil.log(gutil.colors.blue('VendorJS: Concat | >'), gutil.colors.green(paths.dist));
         });
 });
 
@@ -133,7 +134,16 @@ gulp.task('css', function () {
         .pipe(concat('style.css'))
         .pipe(gulp.dest(paths.dist))
         .on('end', function() {
-            gutil.log(gutil.colors.blue('Styles: Concat | >'), gutil.colors.green(paths.distImages));
+            gutil.log(gutil.colors.blue('Styles: Concat | >'), gutil.colors.green(paths.dist));
+        });
+});
+
+gulp.task('vendorCSS', function () {
+    return gulp.src(vendorCSS)
+        .pipe(concat('vendor.style.css'))
+        .pipe(gulp.dest(paths.dist))
+        .on('end', function() {
+            gutil.log(gutil.colors.blue('VendorCSS Styles: Concat | >'), gutil.colors.green(paths.dist));
         });
 });
 
@@ -156,7 +166,6 @@ gulp.task('serve', ['build'], function() {
 gulp.task('buildReload', ['build'], function(){
     return gulp.src('')
         .on('end', function() {
-            console.log('dsa');
             browserSync.reload()
         });
 });
