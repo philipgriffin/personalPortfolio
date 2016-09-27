@@ -31,7 +31,8 @@ var paths = {
 
 var vendorJs = [
     'node_modules/angular/angular.min.js',
-    'node_modules/angular-ui-router/release/angular-ui-router.min.js'
+    'node_modules/angular-ui-router/release/angular-ui-router.min.js',
+    'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js'
 ];
 
 // TODO: Update the CDN's
