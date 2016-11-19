@@ -4,7 +4,95 @@ html {
 
 body {
     /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
+    font-size: 100%;
 }
+
+/* pg-header styles */
+pg-header h1 {
+    color: #444444;
+    line-height: 60px;
+    font-family:Montserrat;
+    font-weight:700;
+    font-style:normal;
+}
+
+pg-header h2 {
+    font-size: 14px;
+    color: #444444;
+    line-height: 26px;
+    font-family: Raleway;
+    font-weight: 300;
+    font-style: normal;
+}
+
+pg-header .navigation {
+    line-height: 50px;
+    font-size: 2em;
+    color: rgba(255,255,255,0.8);
+    background-color: #444444;
+}
+
+pg-header .navigation .work-link {
+    cursor: pointer;
+}
+
+pg-header .navigation .work-link:hover {
+    color: red;
+}
+
+pg-header .navigation .work-link:first-child
+{
+   padding-left: 5%;
+}
+
+pg-header .navigation .work-link:after
+{
+    content: ' /';
+    cursor: text;
+    padding: 0 2%;
+    color: rgba(255,255,255,0.8) !important;
+}
+pg-header .navigation .work-link:last-child:after
+{
+    content: '';
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 320px) {
+    pg-header h1 {
+        font-size: 10vw;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (min-width : 480px) {
+    pg-header h1 {
+        font-size: 10vw;
+        line-height: 60px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    pg-header h1 {
+        font-size: 7vw;
+        line-height: 70px;
+    }
+}
+
+@media only screen and (min-width : 1200px) {
+    pg-header h1 {
+        font-size: 6vw;
+        line-height: 90px;
+    }
+}
+
+
+pg-header .col-md-8 {
+    /*background-color: gray;*/
+}
+
+/* pg-header styles end */
 
 .active::after {
     content: '>';
