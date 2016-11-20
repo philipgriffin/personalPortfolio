@@ -1,25 +1,17 @@
-<!--<ul class="nav nav-pills bg-success">-->
-    <!--<li class="nav-item">-->
-        <!--<a class="nav-link"  ui-sref="home">home</a>-->
-    <!--</li>-->
-    <!--<li class="nav-item">-->
-        <!--<a class="nav-link" ui-sref="temp">temp</a>-->
-    <!--</li>-->
-    <!--<li class="nav-item">-->
-        <!--<a class="nav-link disabled" href="#">Disabled</a>-->
-    <!--</li>-->
-<!--</ul>-->
 <div class="row-fluid">
     <div class="col-xs-12">
-        <H2>MY NAME IS</H2>
-        <H1>PHILIP GRIFFIN</H1>
-        <H2>SOFTWARE ENGINEER / DEVELOPER</H2>
+        <H1 class="animated slideInLeft">PHILIP GRIFFIN</H1>
+        <H2 class="animated slideInRight">SOFTWARE ENGINEER / DEVELOPER</H2>
     </div>
 </div>
 <div class="row-fluid">
-    <div class="navigation text-center col-xs-12">
-        <span ui-sref="home" class="work-link">about</span>
-        <span ui-sref="temp" class="work-link">development</span>
-        <span ui-sref="temp" class="work-link">contact</span>
+    <div class="col-xs-12 nav-wrapper">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 navigation">
+            <ul>
+                <li ui-sref="about" ui-sref-active="active" class="col-xs-4 work-link">about</li>
+                <li ui-sref="development" ui-sref-active="active" class="col-xs-4 work-link">work</li>
+                <li ui-sref="contact" ui-sref-active="active" class="col-xs-4 work-link">contact</li>
+            </ul>
+        </div>
     </div>
 </div>

@@ -1,19 +1,19 @@
 html {
-    height: 100%;
 }
 
 body {
-    /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";*/
     font-size: 100%;
+    overflow: hidden;
 }
 
 /* pg-header styles */
 pg-header h1 {
     color: #444444;
     line-height: 60px;
-    font-family:Montserrat;
-    font-weight:700;
-    font-style:normal;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-style: normal;
+    margin-top: 30px;
 }
 
 pg-header h2 {
@@ -23,49 +23,66 @@ pg-header h2 {
     font-family: Raleway;
     font-weight: 300;
     font-style: normal;
+    margin-bottom: 30px;
+}
+
+pg-header .nav-wrapper {
+    background-color: #444444;
+    padding: 0;
+    margin: 0;
 }
 
 pg-header .navigation {
-    line-height: 50px;
-    font-size: 2em;
-    color: rgba(255,255,255,0.8);
+    font-family: Raleway;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 1.8em;
+    color: rgba(255, 255, 255, 0.8);
     background-color: #444444;
+    padding: 0;
 }
 
-pg-header .navigation .work-link {
+pg-header .navigation ul {
+    margin: 0;
+    padding: 0;
+}
+
+pg-header .navigation ul li {
+    border-bottom: 4px solid #444444;
+    border-top: 4px solid #444444;
+    margin: 0;
+    padding: 12px 0;
+    text-decoration: none;
+    list-style: none;
+    float: left;
+}
+
+pg-header .navigation ul li {
     cursor: pointer;
+    transition: color .4s ease-out;
 }
 
-pg-header .navigation .work-link:hover {
-    color: red;
+pg-header .navigation ul li:hover {
+    color: #1bc09f;
+    transition: color .4s ease-in;
 }
 
-pg-header .navigation .work-link:first-child
-{
-   padding-left: 5%;
-}
-
-pg-header .navigation .work-link:after
-{
-    content: ' /';
-    cursor: text;
-    padding: 0 2%;
-    color: rgba(255,255,255,0.8) !important;
-}
-pg-header .navigation .work-link:last-child:after
-{
-    content: '';
+.active {
+    color: #1bc09f;
+    border-bottom: #1bc09f solid 4px !important;
+    transition: border-color .3s ease-in-out !important;
+    transition: color .4s ease-in-out;
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (min-width : 320px) {
+@media only screen and (min-width: 320px) {
     pg-header h1 {
         font-size: 10vw;
         line-height: 30px;
     }
 }
 
-@media only screen and (min-width : 480px) {
+@media only screen and (min-width: 480px) {
     pg-header h1 {
         font-size: 10vw;
         line-height: 60px;
@@ -73,32 +90,20 @@ pg-header .navigation .work-link:last-child:after
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width : 768px) {
+@media only screen and (min-width: 768px) {
     pg-header h1 {
         font-size: 7vw;
         line-height: 70px;
     }
 }
 
-@media only screen and (min-width : 1200px) {
+@media only screen and (min-width: 1200px) {
     pg-header h1 {
         font-size: 6vw;
         line-height: 90px;
     }
 }
 
-
-pg-header .col-md-8 {
-    /*background-color: gray;*/
-}
-
 /* pg-header styles end */
 
-.active::after {
-    content: '>';
-}
-
-.active::before {
-    content: '<';
-}
 

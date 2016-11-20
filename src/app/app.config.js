@@ -1,18 +1,23 @@
-(function() {
+(function () {
     angular.module('personalPortfolio')
         .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
             $stateProvider
-                .state('home', {
-                    url: '/home',
-                    template: 'Homepage page',
+                .state('about', {
+                    url: '/about',
+                    template: '<pg-about></pg-about>'
                 })
 
-                .state('temp', {
-                    url: '/temp',
-                    template: 'Template page',
+                .state('development', {
+                    url: '/work',
+                    template: '<pg-dev></pg-dev>'
+                })
+
+                .state('contact', {
+                    url: '/contact',
+                    template: '<pg-contact></pg-contact>'
                 });
 
-            $urlRouterProvider.otherwise('/home');
+            $urlRouterProvider.otherwise('/about');
         }]);
 })();
