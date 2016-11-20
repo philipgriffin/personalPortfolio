@@ -1,11 +1,12 @@
-(function() {
+// Component
+(function () {
     angular.module('development')
         .component('pgDev', {
             templateUrl: 'app/development/development.template.html',
-            controller: function() {
-                this.hello = function() {
-                    alert('hello world');
-                }
-            }
-        });
+            controller: ['workList', function (workList) {
+                workList.getWorkItems().then(d => {
+                    this.work = d.test;
+            });
+            }]
+        })
 }());

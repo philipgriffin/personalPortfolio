@@ -9,7 +9,8 @@ var gulp = require('gulp'),
     gutil = require('gulp-util'),
     watch = require('gulp-watch'),
     clear = require('clear'),
-    browserSync = require('browser-sync').create();
+    browserSync = require('browser-sync').create(),
+    babel = require('gulp-babel');
 
 var paths = {
     mainModule: 'personalPortfolio',
@@ -22,17 +23,21 @@ var paths = {
     srcTemplates: 'src/**/*.html',
     srcImages: 'src/app/assets/images/*',
     srcStyles: ['src/app/*.css'],
+    srcData: 'src/app/assets/data/**/*',
     tmpTemplates: '.tmp/templates.js',
     dist: 'dist/',
     distJs: 'dist/scripts/',
     distImages: 'dist/images/',
+    distData: 'dist/data/',
     temp:  '.tmp/'
 };
 
 var vendorJs = [
     'node_modules/angular/angular.min.js',
     'node_modules/angular-ui-router/release/angular-ui-router.min.js',
-    'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js'
+    'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
+    'node_modules/jquery/dist/jquery.min.js',
+    'bower_components/jquery.vibrate.js/build/jquery/jquery.vibrate.js'
 ];
 
 // TODO: Update the CDN's
@@ -43,7 +48,7 @@ var vendorCSS = [
 
 // MAIN TASKS
 
-gulp.task('build', ['clear', 'vendorJS', 'vendorCSS', 'scripts', 'html', 'css', 'images', 'clean'], function(){
+gulp.task('build', ['clear', 'vendorJS', 'vendorCSS', 'scripts', 'html', 'css', 'images', 'data', 'clean'], function(){
     gutil.log(gutil.colors.green('Build - Finished!\n'+ ((reloadCount >= 1) ? 'Reload Count: ' + reloadCount : '')));
     reloadCount++;
 });
@@ -65,6 +70,9 @@ gulp.task('scripts', ['templatecache'], function () {
             paths.srcJsComponents,
             paths.srcJsConfig,
             paths.srcJsAll])
+        .pipe(babel({
+            presets: ['es2015']
+        }))
         .pipe(concat('scripts.js'))
        .pipe(gulp.dest(paths.distJs))
         .pipe(rename('scripts.min.js'))
@@ -128,6 +136,14 @@ gulp.task('images', function () {
         .on('end', function() {
             gutil.log(gutil.colors.blue('Images >'), gutil.colors.green(paths.distImages));
         });
+});
+
+gulp.task('data', function(){
+    return gulp.src(paths.srcData)
+        .pipe(gulp.dest(paths.distData))
+        .on('end', function() {
+            gutil.log(gutil.colors.blue('Data >'), gutil.colors.green(paths.distData));
+        })
 });
 
 gulp.task('css', function () {
