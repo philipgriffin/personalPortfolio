@@ -6,6 +6,10 @@ body {
     overflow-x: hidden;
 }
 
+.ui-view-container {
+    padding: 0;
+}
+
 /* pg-header styles */
 pg-header h1 {
     color: #444444;
@@ -172,7 +176,7 @@ pg-header .navigation ul li:hover {
 
 /* Page header styles */
 
-pg-contact h3, pg-dev h3, pg-about h3 {
+pg-contact h3, pg-dev h3, pg-about h3, h4 {
     margin-top: 30px;
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -183,12 +187,24 @@ pg-contact h3, pg-dev h3, pg-about h3 {
     letter-spacing: 1px;
 }
 
+h4 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+    font-size: 1.4em;
+    font-weight: 200;
+    text-transform: none;
+}
+
 /* Page header styles end*/
 
 /* pg-contact styles */
 
 pg-contact .form-group input, pg-contact .form-group textarea{
     margin: 20px 0;
+}
+
+pg-contact .form-group input:first-child {
+    margin-top: 0px;
 }
 
 pg-contact .form-group input:focus, pg-contact .form-group textarea:focus {
@@ -217,3 +233,44 @@ pg-contact .form-group button:hover {
 
 
 /* pg-contact styles end */
+
+/* pg-dev styles */
+
+pg-dev .work-item {
+    padding: 10px;
+}
+
+pg-dev .work-item:hover {
+    cursor: pointer;
+}
+
+pg-dev .work-item:hover h4 {
+    color: #1bc09f;
+    transition: color .3s ease-in;
+}
+
+pg-dev .work-item .image-container {
+    overflow: hidden;
+    height: 193px;
+}
+
+pg-dev .work-item .image-container img {
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -o-transition: all 1s ease; /* IE 9 */
+    -ms-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+
+pg-dev .work-item:hover img {
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.25);
+}
+
+/* pg-dev styles end*/
+
+
+

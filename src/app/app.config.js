@@ -1,6 +1,6 @@
 (function () {
     angular.module('personalPortfolio')
-        .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
+        .config(['$stateProvider', '$stickyStateProvider', '$urlRouterProvider', function ($stateProvider, $stickyStateProvider, $urlRouterProvider) {
 
             $stateProvider
                 .state('about', {

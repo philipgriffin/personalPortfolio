@@ -21,7 +21,7 @@ var paths = {
     srcJsConfig: 'src/**/*.component.js',
     srcJsAll: 'src/**/*.js',
     srcTemplates: 'src/**/*.html',
-    srcImages: 'src/app/assets/images/*',
+    srcImages: 'src/app/assets/images/**/*',
     srcStyles: ['src/app/*.css'],
     srcData: 'src/app/assets/data/**/*',
     tmpTemplates: '.tmp/templates.js',
@@ -37,6 +37,7 @@ var vendorJs = [
     'node_modules/angular-ui-router/release/angular-ui-router.min.js',
     'node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js',
     'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/ui-router-extras/release/ct-ui-router-extras.js',
     'bower_components/jquery.vibrate.js/build/jquery/jquery.vibrate.js'
 ];
 
@@ -176,7 +177,8 @@ gulp.task('serve', ['build'], function() {
         paths.srcIndex,
         paths.srcTemplates,
         paths.srcJsAll,
-        paths.srcStyles], ['buildReload']);
+        paths.srcStyles,
+        paths.srcData], ['buildReload']);
 });
 
 //INFO: This was implemented to make browserSync wait for tasks to finish then reload

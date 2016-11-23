@@ -4,8 +4,9 @@
         .component('pgDev', {
             templateUrl: 'app/development/development.template.html',
             controller: ['workList', function (workList) {
+
                 workList.getWorkItems().then(d => {
-                    this.work = d.test;
+                    this.work = d;
             });
             }]
         })
