@@ -2,7 +2,7 @@
     <h3>My Work</h3>
     <div ng-if="!$ctrl.work" class="loader"></div>
 
-    <div ng-if="$ctrl.work"  class="col-xs-12 col-lg-6 work-item" ng-repeat="item in $ctrl.work">
+    <div ng-if="$ctrl.work" ng-click="$ctrl.openModal(item)" class="col-xs-12 col-lg-6 work-item" ng-repeat="item in $ctrl.work">
         <div style="padding: 0;" class="col-xs-12 image-container">
             <img class="img-responsive" ng-src="{{item.img}}" alt="">
         </div>
