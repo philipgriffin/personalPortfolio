@@ -38,7 +38,7 @@ var vendorJs = [
     'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/ui-router-extras/release/ct-ui-router-extras.js',
-    'bower_components/jquery.vibrate.js/build/jquery/jquery.vibrate.js'
+    'extJS/jquery.vibrate.min.js'
 ];
 
 // TODO: Update the CDN's
