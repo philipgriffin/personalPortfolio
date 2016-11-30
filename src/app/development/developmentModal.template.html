@@ -1,10 +1,10 @@
 <div class="modal-header">
   <h3 class="modal-title pull-left" id="modal-title">{{$ctrl.work.name}}</h3>
   <h3 class="modal-title pull-right" id="modal-title">
-    <i ng-click="$ctrl.closeModal()" style="vertical-align:middle;" class="material-icons">close</i>
+    <i ng-click="$ctrl.closeModal()" style="vertical-align:middle; cursor: pointer;" class="material-icons">close</i>
   </h3>
         </div>
         <div class="modal-body" id="modal-body">
-        <h4>About</h4>
-        {{$ctrl.work.info}}
+        <h1>About</h1>
+        <span class="project-information">{{$ctrl.work.info}}</span>
         </div>

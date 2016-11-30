@@ -2,6 +2,7 @@
   {
     "name": "Check Inn",
     "img": "images/checkinn/checkinnfront.jpg",
+    "screenshots": ["",""],
     "info": "Check Inn, a hotel booking system, built in Java using Swing is designed to accommodate multi-booking hotel reservations and also accommodates for checking in/out guests, editing existing bookings, printing receipts and viewing general information (earnings, system access information, staff information).",
     "windows": true,
     "iconToolTip": "Windows",
