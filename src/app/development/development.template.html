@@ -1,6 +1,6 @@
 <div class="row-fluid col-xs-12">
     <h3 class="col-xs-6">My Work</h3>
-    <h3 ng-model="showSearch" ng-click="showSearch = !showSearch;" class="col-xs-6 text-right"><i style="cursor:pointer;" class="material-icons">search</i></h3>
+    <h3 ng-model="showSearch" class="col-xs-6 text-right"><i  ng-click="showSearch = !showSearch;" style="cursor:pointer;" class="material-icons">search</i></h3>
     <input ng-show="showSearch" placeholder="Search by name here" class="col-xs-12 cool-input animated bounce" ng-model="searchTerm.name" type="text">
     <div ng-if="!$ctrl.work" class="loader"></div>
 
@@ -12,4 +12,5 @@
         <h4 class="pull-left xs-col-10">{{item.name}}</h4>
         <h4 class="pull-right xs-col-2">Completed: {{item.date}}</h4>
     </div>
+    <h2 style="font-size: 2em; color:tomato; text-align: center; font-family: raleway; padding: 5%; margin-top: 10px;" ng-show="($ctrl.work | filter: searchTerm).length == 0">Nothing Found! Try again!</h2>
 </div>

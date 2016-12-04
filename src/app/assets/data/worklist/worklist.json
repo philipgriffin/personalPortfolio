@@ -18,19 +18,21 @@
     "date": "1/1/16"
   },
   {
-    "name": "Modulus 26 Decrypter",
-    "img": "images/testImage2.jpeg",
+    "name": "Mod-26 Decrypter",
+    "img": "images/mod26/mod26front.jpg",
+    "screenshots": ["images/mod26/img2.png","images/mod26/img1.png"],
     "info": "Designed as a side project the Modulus 26 Decrypter, written in Java using swing, was developed to decipher an encryption scheme. Using two known encrypted and decrypted characters the Mod 26 Decrypter will provide the encryption and decryption map for the mapping scheme. An encrypted message can also be solved. ",
     "windows": true,
     "iconToolTip": "Windows",
-    "date": "10/10/16"
+    "date": "19/11/14"
   },
   {
-    "name": "Task List",
-    "img": "images/testImage2.jpeg",
-    "info": "this is the information",
+    "name": "Pg News",
+    "img": "images/pgnews/pgnewsfront.jpg",
+    "screenshots": ["images/pgnews/img2.jpeg","images/pgnews/img1.jpeg"],
+    "info": "Pg News is a fully customisable news reader application developed for Android and iOS using IONIC(v1). It utilises NewsApi.org, a single API that reaches out to a huge collection of news sources to enable a quick and easy jump from source to source.",
     "web": true,
     "iconToolTip": "Web Application",
-    "date": "10/10/16"
+    "date": "07/10/16"
   }
 ]

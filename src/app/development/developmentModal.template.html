@@ -8,5 +8,5 @@
         <h3>About</h3>
         <span class="project-information">{{$ctrl.work.info}}</span>
         <h3 ng-if="$ctrl.work.screenshots">Screenshots</h3>
-        <img style="margin: 0 auto; padding-bottom: 20px;" class="img-responsive" ng-repeat="i in $ctrl.work.screenshots" ng-src="{{i}}" alt="">
+        <img style="margin: 0 auto; margin-bottom: 20px; border: solid 1px #444444;" class="img-responsive" ng-repeat="i in $ctrl.work.screenshots" ng-src="{{i}}" alt="">
         </div>

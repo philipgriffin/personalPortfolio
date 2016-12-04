@@ -80,6 +80,22 @@ pg-header .navigation ul li:hover {
     transition: color .4s ease-in;
 }
 
+pg-header .info-modal-button {
+  color: white;
+  z-index: 1000;
+  position: absolute;
+  top: 5px;
+  left: 95%;
+  cursor: pointer;
+  transition: font-size .3s ease-in-out;
+}
+
+pg-header .info-modal-button:hover {
+  font-size: 3em;
+  transition: font-size .3s ease-in-out;
+  opacity: 0.8;
+}
+
 .active {
     color: #1bc09f;
     border-bottom: #1bc09f solid 4px !important;
@@ -301,6 +317,11 @@ pg-contact .separator-container .word {
 pg-contact .social-button {
   padding-top: 10px;
 }
+
+pg-contact .social-button:hover pg-contact .social-button a span{
+  color:white;
+}
+
 pg-contact .twtter-widget-container {
   padding-top:  140px !important;
 }
