@@ -38,13 +38,16 @@ var vendorJs = [
     'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
     'node_modules/jquery/dist/jquery.min.js',
     'node_modules/ui-router-extras/release/ct-ui-router-extras.js',
-    'extJS/jquery.vibrate.min.js'
+    'extJS/jquery.vibrate.min.js',
+    'extJS/ngTweet.min.js'
 ];
 
 // TODO: Update the CDN's
 var vendorCSS = [
-    'extCSS/animate.css',
-    'node_modules/bootstrap/dist/css/bootstrap.min.css'
+  'extCSS/animate.css',
+  'extCSS/bootstrap-social.css',
+  'node_modules/bootstrap/dist/css/bootstrap.min.css',
+  'node_modules/font-awesome/css/font-awesome.css'
 ];
 
 // MAIN TASKS

@@ -4,7 +4,6 @@
         .component('pgDev', {
             templateUrl: 'app/development/development.template.html',
             controller: ['$uibModal', 'workList', function ($uibModal, workList) {
-
                 workList.getWorkItems().then(d => {
                     this.work = d;
             });

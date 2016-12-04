@@ -11,8 +11,15 @@ body {
 }
 
 /* pg-header styles */
+pg-header video {
+  opacity: 1;
+  position: absolute;
+  top: -885px;
+  left: 0;
+}
+
 pg-header h1 {
-    color: #444444;
+    color: rgba(255,255,255, 0.9);
     line-height: 60px;
     font-family: Montserrat;
     font-weight: 700;
@@ -21,8 +28,8 @@ pg-header h1 {
 }
 
 pg-header h2 {
+    color: rgba(255,255,255, 0.9);
     font-size: 14px;
-    color: #444444;
     line-height: 26px;
     font-family: Raleway;
     font-weight: 300;
@@ -31,18 +38,20 @@ pg-header h2 {
 }
 
 pg-header .nav-wrapper {
-    background-color: #444444;
+    /*background-color: #444444;*/
+    background-color: #292929;
     padding: 0;
     margin: 0;
 }
 
 pg-header .navigation {
+  opacity: 0.9;
     font-family: Raleway;
     font-weight: 400;
     text-transform: lowercase;
     font-size: 1.8em;
     color: rgba(255, 255, 255, 0.8);
-    background-color: #444444;
+    background-color: #292929;
     padding: 0;
 }
 
@@ -52,8 +61,8 @@ pg-header .navigation ul {
 }
 
 pg-header .navigation ul li {
-    border-bottom: 4px solid #444444;
-    border-top: 4px solid #444444;
+    border-bottom: 4px solid #292929;
+    border-top: 4px solid #292929;
     margin: 0;
     padding: 12px 0;
     text-decoration: none;
@@ -79,10 +88,22 @@ pg-header .navigation ul li:hover {
 }
 
 /* Extra Small Devices, Phones */
+@media only screen and (min-width: 315px) {
+    pg-header h1 {
+        font-size: 10vw;
+        line-height: 30px;
+    }
+}
+
+/* Extra Small Devices, Phones */
 @media only screen and (min-width: 320px) {
     pg-header h1 {
         font-size: 10vw;
         line-height: 30px;
+    }
+
+    pg-header video {
+      top: -890px;
     }
 }
 
@@ -90,6 +111,10 @@ pg-header .navigation ul li:hover {
     pg-header h1 {
         font-size: 10vw;
         line-height: 60px;
+    }
+
+    pg-header video {
+      top: -885px;
     }
 }
 
@@ -232,6 +257,54 @@ pg-contact .form-group button:hover {
 }
 
 
+pg-contact .separator-container .separator {
+  border-right: 3px solid #1bc09f;
+  height: 310px;
+}
+
+pg-contact .separator-container .wrapper {
+    position: relative;
+    height: 300px;
+    margin: 10px;
+}
+
+pg-contact .separator-container .line {
+    position: absolute;
+    left: 49%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: #ccc;
+    z-index: 1;
+}
+
+pg-contact .separator-container .wordwrapper {
+    text-align: center;
+    height: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -12px;
+    z-index: 2;
+}
+
+pg-contact .separator-container .word {
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 3px;
+    font: bold 12px arial,sans-serif;
+    background: #fff;
+}
+
+pg-contact .social-button {
+  padding-top: 10px;
+}
+pg-contact .twtter-widget-container {
+  padding-top:  140px !important;
+}
+
 /* pg-contact styles end */
 
 /* pg-dev styles */
@@ -270,6 +343,24 @@ pg-dev .work-item:hover img {
     transform:scale(1.25);
 }
 
+pg-dev .cool-input {
+  font-size: 1.4em;
+  border:none;
+  border-bottom: solid 2px #1bc09f;
+}
+
+pg-dev .cool-input:focus {
+  border:none;
+  outline: none;
+  border-bottom: solid 2px #1bc090;
+}
+
+pg-dev .cool-input[placeholder] {
+  text-align: center;
+  font-style: italic;
+  opacity: 0.7;
+}
+
 #modal-body .project-information {
   font-family: raleway;
   color: #444444;
@@ -278,3 +369,40 @@ pg-dev .work-item:hover img {
 }
 
 /* pg-dev styles end*/
+
+/* pg-about styles*/
+
+pg-about blockquote {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    width: 500px;
+    margin: 0.25em 0;
+    padding: 0.35em 40px;
+    line-height: 1.45;
+    position: relative;
+    color: #383838;
+    border: none;
+}
+
+pg-about blockquote:before {
+    display: block;
+    padding-left: 10px;
+    content: "\201C";
+    font-size: 80px;
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    color: #7a7a7a;
+}
+
+pg-about span {
+  display: block;
+  padding-top: 10px;
+  font-family: raleway;
+  letter-spacing: 1px;
+  line-height:20px
+  font: 400;
+  font-size: 1.4em;;
+}
+/* pg-about styles end*/

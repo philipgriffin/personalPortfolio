@@ -2,19 +2,20 @@
   {
     "name": "Check Inn",
     "img": "images/checkinn/checkinnfront.jpg",
-    "screenshots": ["",""],
+    "screenshots": ["images/checkinn/img1.png","images/checkinn/img2.png"],
     "info": "Check Inn, a hotel booking system, built in Java using Swing is designed to accommodate multi-booking hotel reservations and also accommodates for checking in/out guests, editing existing bookings, printing receipts and viewing general information (earnings, system access information, staff information).",
     "windows": true,
     "iconToolTip": "Windows",
-    "date": "10/10/16"
+    "date": "1/04/15"
   },
   {
     "name": "Todo List",
     "img": "images/todolist/todolistfront.jpg",
-    "info": "this is the information",
+    "screenshots": ["images/todolist/img1.png"],
+    "info": "A fully responsive task list logging application that is available on all platforms. Built using AngularJS(1), HTML and SASS. The application allows users to add multiple lists, title lists, add individual tasks to each list, customise background images along with many other aspects. The application was developed using an agile methodology and utilizes local storage for persistence.",
     "windows": true,
     "iconToolTip": "Windows",
-    "date": "10/10/16"
+    "date": "1/1/16"
   },
   {
     "name": "Modulus 26 Decrypter",

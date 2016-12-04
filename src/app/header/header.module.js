@@ -1,3 +1,3 @@
 (function() {
-    angular.module('header', ['ui.bootstrap']);
+    angular.module('header', ['ui.bootstrap', 'core']);
 }());

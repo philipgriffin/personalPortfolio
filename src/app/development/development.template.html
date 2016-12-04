@@ -1,12 +1,15 @@
 <div class="row-fluid col-xs-12">
-    <h3>My Work</h3>
+    <h3 class="col-xs-6">My Work</h3>
+    <h3 ng-model="showSearch" ng-click="showSearch = !showSearch;" class="col-xs-6 text-right"><i style="cursor:pointer;" class="material-icons">search</i></h3>
+    <input ng-show="showSearch" placeholder="Search by name here" class="col-xs-12 cool-input animated bounce" ng-model="searchTerm.name" type="text">
     <div ng-if="!$ctrl.work" class="loader"></div>
 
-    <div ng-if="$ctrl.work" ng-click="$ctrl.openModal(item)" class="col-xs-12 col-lg-6 work-item" ng-repeat="item in $ctrl.work">
+
+    <div ng-if="$ctrl.work" ng-click="$ctrl.openModal(item)" class="col-xs-12 col-lg-6 work-item" ng-repeat="item in $ctrl.work | filter: searchTerm">
         <div style="padding: 0;" class="col-xs-12 image-container">
             <img class="img-responsive" ng-src="{{item.img}}" alt="">
         </div>
         <h4 class="pull-left xs-col-10">{{item.name}}</h4>
-        <h4 class="pull-right xs-col-2">{{item.date}}</h4>
+        <h4 class="pull-right xs-col-2">Completed: {{item.date}}</h4>
     </div>
 </div>

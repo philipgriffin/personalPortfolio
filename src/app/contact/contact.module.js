@@ -1,3 +1,3 @@
 (function() {
-    angular.module('contact', ['ui.bootstrap']);
+    angular.module('contact', ['ui.bootstrap', 'ngtweet']);
 }());
